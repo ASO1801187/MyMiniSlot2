@@ -63,16 +63,17 @@ class SubActivity : AppCompatActivity(){
             }
 
             my_coin1.setText(coin.toString())
+
+            val prefer = PreferenceManager.getDefaultSharedPreferences(this);
+            val editor = prefer.edit()
+            editor.putInt("MY_COIN",coin).apply()
+            editor.commit()
         }
 
     }
 
     fun modoru(view: View?){
-        val prefer = PreferenceManager.getDefaultSharedPreferences(this);
-        val editor = prefer.edit()
-        coin = coin
-        editor.putInt("MY_COIN",coin)
-        editor.commit()
+
         finish()
     }
 

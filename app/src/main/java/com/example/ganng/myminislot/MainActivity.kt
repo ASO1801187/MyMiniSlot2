@@ -18,21 +18,24 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val prefer = PreferenceManager.getDefaultSharedPreferences(this);
-        val editor = prefer.edit()
         setContentView(R.layout.activity_main)
-
-        coin = prefer.getInt("MY_COIN", 1000)
-        my_coin1.setText(coin.toString())
-        my_bet1.setText(bet.toString())
-
 
         up_bet.setOnClickListener {bet_upTapped(it)}
         down_bet.setOnClickListener {bet_downTapped(it)}
         reset_btn.setOnClickListener { reset(it) }
         start.setOnClickListener { intent(it) }
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val prefer = PreferenceManager.getDefaultSharedPreferences(this);
+        val editor = prefer.edit()
+        coin = prefer.getInt("MY_COIN", 1000)
+        my_coin1.setText(coin.toString())
+        my_bet1.setText(bet.toString())
 
     }
 
@@ -63,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         coin = defultCoin
         bet = defultbet
         my_coin1.setText((coin).toString())
+        my_bet1.setText((bet).toString())
         editor.putInt("MY_COIN",defultCoin)
         editor.commit()
     }

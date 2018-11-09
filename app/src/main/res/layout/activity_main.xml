@@ -12,15 +12,16 @@
             android:id="@+id/imageView9"
             android:scaleType="fitCenter"
             android:layout_marginTop="100dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="164dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="164dp"/>
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
     <TextView
             android:text="@string/title"
             android:layout_width="460dp"
             android:layout_height="66dp"
             android:id="@+id/textView2" android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="@+id/imageView9"
-            app:layout_constraintStart_toStartOf="@+id/imageView9" android:layout_marginTop="52dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView9" android:layout_marginTop="32dp"
             app:layout_constraintTop_toBottomOf="@+id/imageView9"/>
     <TextView
             android:text="@string/coin_name"
@@ -85,6 +86,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/reset_btn"
             android:textSize="20sp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="48dp" android:layout_marginStart="48dp" android:layout_marginTop="36dp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginTop="28dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginLeft="46dp"
+            android:layout_marginStart="46dp"/>
 </android.support.constraint.ConstraintLayout>
